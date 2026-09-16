@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#103d2c">
+  <title>LIFE+ by NCSA: Anabeeb Staff Restaurant</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="config.js"></script><script defer src="languages.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+  <main>
+    <div class="brand-logos" role="img" aria-label="LIFE+ and Anabeeb"></div>
+    <span id="brand" hidden>Resident services</span><span id="badge" hidden>MAINTENANCE</span>
+    <section id="language-screen" aria-labelledby="welcome">
+      <h1 id="welcome">LIFE+ by NCSA: Anabeeb Staff<br class="desktop-break"> Restaurant</h1>
+      <p class="lead">Please select your preferred language to continue.</p>
+      <div class="language-grid" id="languages"></div>
+    </section>
+    <section id="form-screen" hidden>
+      <button type="button" class="back" id="change-language"></button>
+      <div class="eyebrow" id="form-eyebrow"></div><h1 id="form-title"></h1><p class="lead" id="intro"></p>
+      <div id="setup-notice" class="notice" role="status" hidden></div>
+      <form id="complaint" novalidate>
+        <fieldset id="form-fields">
+          <div class="section-title"><span>01</span><h2 id="details-heading"></h2></div>
+          <div class="fields" id="personal-fields"></div>
+          <div class="section-title"><span>02</span><h2 id="issue-heading"></h2></div>
+          <div class="fields" id="issue-fields"></div>
+          <div class="section-title"><span>03</span><h2 id="attachments-heading"></h2></div>
+          <div class="upload-box"><label for="media" id="upload-label"></label><p id="upload-help" class="help"></p><input id="media" name="media" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,video/mp4,video/quicktime,video/webm" multiple><ul id="file-list"></ul></div>
+          <p class="help" id="automatic"></p><p class="help" id="required-help"></p>
+          <div class="trap" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+          <div id="challenge"></div><p id="form-error" class="error" role="alert" tabindex="-1"></p>
+          <button id="submit" type="submit" class="primary"></button>
+        </fieldset>
+      </form>
+    </section>
+    <section id="success-screen" hidden aria-live="polite" tabindex="-1"><div class="success-mark">✓</div><h1 id="success-title"></h1><p id="success-message" class="lead"></p><div class="reference"><span id="reference-label"></span><strong id="reference-number"></strong></div><button class="primary" id="another" type="button"></button></section>
+    <footer><span id="footer">© 2026 National Catering Company</span></footer>
+  </main>
+</body>
+</html>
