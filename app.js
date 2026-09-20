@@ -6,7 +6,7 @@
   const t = () => LANGUAGES[language].ui;
   const configured = () => /^https:\/\//.test(cfg.apiUrl || '') && !!cfg.turnstileSiteKey;
   function error(message) { $('form-error').textContent = message; if(message) $('form-error').focus(); }
-  function show(id) { ['language-screen','form-screen','success-screen'].forEach(s => $(s).hidden = s !== id); document.body.dataset.screen=id; if(id==='language-screen'){document.title='LIFE+ by NCSA: Anabeeb Staff Restaurant';$('footer').textContent='© 2026 National Catering Company';} window.scrollTo(0,0); }
+  function show(id) { ['language-screen','form-screen','success-screen'].forEach(s => $(s).hidden = s !== id); document.body.dataset.screen=id; if(id==='language-screen'){document.title='LIFE+ by NCSA';$('footer').textContent='© 2026 National Catering Company';} window.scrollTo(0,0); }
   function remember() { for(const input of $('complaint').querySelectorAll('[data-field]')) values[input.name] = input.value; }
   function field(name, kind, required, destination) {
     const wrapper=document.createElement('div'); wrapper.className='field'+(kind==='textarea'?' full':'');
